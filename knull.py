@@ -119,3 +119,95 @@
 #                      Python DSA Course Practice Rough Sheet
 
 # -------------------------------------------------------------------------------------
+
+# --- contains Duplicate ---
+
+# array = [1, 2, 3, 4]
+
+# hashset = set(array)
+
+# for n in array:
+#     if n in hashset:
+#         print("False")
+#     hashset.add(n)
+
+# print("True")
+
+# -------------------------------------------------------------------------------------
+
+# --- anagram ---
+
+# s = 'cat'
+# t = 'cat'
+
+# map_s = {}
+# map_t = {}
+
+# if len(s) != len(t):
+#     print(False)
+# else:
+#     for char in s:
+#         map_s[char] = map_s.get(char, 0) + 1
+
+#     for char in t:
+#         map_t[char] = map_t.get(char, 0) + 1
+
+#     if map_s != map_t:
+#         print(False)
+#     else:
+#         print(True)
+
+# -------------------------------------------------------------------------------------
+
+# --- Two Sum ---
+
+###############################
+
+# dic = {1: "kunal", 2: "adhav"}
+
+# arr = [1, 2, 3, 4, 5]
+
+# for i, num in enumerate(arr):
+#     print(i)
+
+###############################
+
+# arr = [2, 7, 11, 15]
+# target = 9
+# hashmap = {}
+
+# for i, num in enumerate(arr):
+#     diff = target - num
+
+#     if diff in hashmap:
+#         print([hashmap[diff], i])
+#     hashmap[num] = i
+
+# -------------------------------------------------------------------------------------
+
+# --- Group anagram ---
+
+###############################
+
+# count = [0] * 26
+
+# print(count[22])
+
+# from collections import defaultdict
+# strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
+
+# for i in range(len(strs)):
+#     key = ''.join(sorted(strs[i]))
+#     print(type(key))
+###############################
+
+
+# hashmap = defaultdict(list)
+
+# for word in strs:
+#     count = [0] * 26
+#     for char in word:
+#         count[ord(char) - ord('a')] += 1
+#     hashmap[tuple(count)].append(word)
+
+# return hashmap.values()
