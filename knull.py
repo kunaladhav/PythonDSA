@@ -168,7 +168,7 @@
 # arr = [1, 2, 3, 4, 5]
 
 # for i, num in enumerate(arr):
-#     print(i)
+#     print(i, num)
 
 ###############################
 
@@ -211,3 +211,39 @@
 #     hashmap[tuple(count)].append(word)
 
 # return hashmap.values()
+
+# -------------------------------------------------------------------------------------
+
+# --- Concatenation of Array ---
+
+###############################
+
+# nums = []
+
+# ans = nums * 2
+
+# print(ans)
+
+# -------------------------------------------------------------------------------------
+
+# --- Prefix Sums ---
+
+###############################
+
+list1 = [1, 2, 3, 4, 5, 6, 7]
+
+
+def prefix_sum(lst):
+
+    pre = [0] * (len(lst) + 1)
+    sum = 0
+
+    for i in range(len(lst)):
+        sum += lst[i]
+        pre[i + 1] = sum
+
+    return pre
+
+
+print(list1)
+print(prefix_sum(list1))
